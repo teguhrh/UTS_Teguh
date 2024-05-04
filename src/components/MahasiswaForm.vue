@@ -29,13 +29,19 @@ export default {
   methods: {
     submitMahasiswa() {
       if (!this.mhs.npm || !this.mhs.nama || !this.mhs.ipk) {
-        alert('field tertentu belum terisi!')
+        alert('Field tertentu belum terisi!')
       } else if (this.mhs.ipk < 0 || this.mhs.ipk > 4) {
         alert('IPK harus diantara 0 sampai 4')
       } else {
-        alert('Data Mahasiswa ' + this.mhs.nama + ' berhasil disimpan')
-        this.mhs = new Mahasiswa('', '', 0)
+        const confirmation = confirm('Apakah Anda yakin ingin menyimpan data?')
+        if (confirmation) {
+          alert('Data Mahasiswa ' + this.mhs.nama + ' berhasil disimpan')
+          this.resetData()
+        }
       }
+    },
+    resetData() {
+      this.mhs = new Mahasiswa('', '', 0)
     }
   }
 }
@@ -47,7 +53,10 @@ h2 {
 }
 
 .outer-box {
-  border: 2px solid #ccc;
-  padding: 80px;
+  border: 1px solid #ccc;
+  padding: 80px; /* Mengurangi padding untuk tampilan yang lebih ramping */
+  background-color: #f9f9f9; /* Ubah warna latar belakang menjadi abu-abu muda */
+  border-radius: 10px; /* Tambahkan border-radius untuk sudut yang lebih lembut */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
 }
 </style>

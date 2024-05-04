@@ -36,6 +36,12 @@ const router = createRouter({
       path: '/Ruangan',
       name: 'ruangan',
       component: () => import('@/components/RuanganForm.vue')
+    },
+
+    {
+      path: '/JadwalKuliah',
+      name: 'JadwalKuliah',
+      component: () => import('@/components/JadwalKuliah.vue')
     }
   ]
 })

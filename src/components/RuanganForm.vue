@@ -43,7 +43,10 @@ h2 {
 }
 
 .outer-box {
-  border: 2px solid #ccc;
-  padding: 90px;
+  border: 1px solid #ccc;
+  padding: 90px; /* Mengurangi padding untuk tampilan yang lebih ramping */
+  background-color: #f9f9f9; /* Ubah warna latar belakang menjadi abu-abu muda */
+  border-radius: 10px; /* Tambahkan border-radius untuk sudut yang lebih lembut */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
 }
 </style>

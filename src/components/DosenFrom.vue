@@ -40,11 +40,15 @@ export default {
 <style scoped>
 h2 {
   padding-bottom: 30px;
+  color: #000000;
 }
 
 .outer-box {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   padding: 100px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .input-row {
