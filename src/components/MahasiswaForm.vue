@@ -3,7 +3,7 @@
     <div class="outer-box">
       <h2>Entry Data Mahasiswa</h2>
       <v-row>
-        <v-text-field label="NPM" variant="outlined"></v-text-field>
+        <v-text-field label="NPM" v-model="mhs.npm" variant="outlined"></v-text-field>
       </v-row>
       <v-row>
         <v-text-field label="Nama" v-model="mhs.nama" variant="outlined"></v-text-field>
@@ -23,7 +23,7 @@ import { Mahasiswa } from '@/model/Mahasiswa'
 export default {
   data() {
     return {
-      mhs: new Mahasiswa('1234', '', 0)
+      mhs: new Mahasiswa('', '', 0)
     }
   },
   methods: {
